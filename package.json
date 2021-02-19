@@ -1,0 +1,16 @@
+
+  {
+    "name": "test-deploy",
+    "version": "1.0.0",
+    "scripts": {
+      "build": "npm run setup:client && npm run setup:server && npm run build:client",
+      "setup:client": "cd test-deploy.client && npm i",
+      "setup:server": "cd test-deploy.server && npm i",
+      "build:client": "npm run --prefix test-deploy.client build",
+      "start": "node test-deploy.server/index.js"
+    },
+    "engines": {
+      "node": "^14.15.4"
+    }
+  }
+  
